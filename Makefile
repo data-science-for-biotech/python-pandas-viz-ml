@@ -31,6 +31,8 @@ ifeq (,$(PYTHON))
   endif
 endif
 
+RETICULATE_PYTHON?=$(PYTHON)
+export RETICULATE_PYTHON
 
 # Default target
 .DEFAULT_GOAL := commands
@@ -49,7 +51,7 @@ site : lesson-md
 	${JEKYLL} build
 
 ## * docker-serve     : use Docker to serve the site
-docker-serve :
+docker-serve : lesson-md
 	@docker pull carpentries/lesson-docker:latest
 	@docker run --rm -it \
 		-v $${PWD}:/home/rstudio \
@@ -96,7 +98,7 @@ workshop-check : python
 ## III. Commands specific to lesson websites
 ## =================================================
 
-.PHONY : lesson-check lesson-md lesson-files lesson-fixme install-rmd-deps
+.PHONY : lesson-check lesson-files lesson-fixme install-rmd-deps
 
 # RMarkdown files
 RMD_SRC = $(wildcard _episodes_rmd/*.Rmd)
@@ -127,9 +129,9 @@ install-rmd-deps:
 	@${SHELL} bin/install_r_deps.sh
 
 ## * lesson-md        : convert Rmarkdown files to markdown
-lesson-md : ${RMD_DST}
+lesson-md : $(RMD_DST)
 
-_episodes/%.md: _episodes_rmd/%.Rmd install-rmd-deps
+$(RMD_DST): _episodes/%.md: _episodes_rmd/%.Rmd
 	@mkdir -p _episodes
 	@$(SHELL) bin/knit_lessons.sh $< $@
 

@@ -1,0 +1,7 @@
+-r requirements.txt
+
+altair-saver
+jedi <0.18
+jupyterlab
+jupytext
+selenium

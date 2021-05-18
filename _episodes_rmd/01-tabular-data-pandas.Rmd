@@ -1,5 +1,5 @@
 ---
-title: "Reading and Working with Tabular Data in Pandas"
+title: "Reading and Working with Tabular Data"
 teaching: 50
 exercises: 40
 questions:
@@ -14,14 +14,14 @@ objectives:
   - "Transform a data frame from messy to tidy data."
   - "Understand common data workflows (ETL) and strategies (split-apply-combine)."
 keypoints:
-  - "Use `pandas.read_*` and `to_*` to import / export data."
+  - "Use `pandas.read_*` and `pandas.DataFrame.to_*` to import / export data."
   - "The method `info` describes the data frame object."
   - "The method `describe` summarizes value distributions in columns."
   - "You can use labels or index locations to select both subsets and elements from your data frame."
   - "Selection using conditions is very powerful."
   - "Selections create views on your original data."
-  - "Use `mean`, `max`, `min` and `std` to calculate simple statistics."
-  - "Use split-apply-combine to calculate statistics across the groups in a data frame."
+  - "Use `mean`, `max`, `min`, and others to calculate simple statistics."
+  - "Use split-apply-combine to calculate statistics within groups in a data frame."
 ---
 
 ```{r, include = FALSE}
@@ -188,6 +188,8 @@ The `NaN` values displayed in the output are simply Pandas' concept of missing v
 > {: .solution}
 {: .challenge}
 
+### Other data formats
+
 #### Excel
 
 When you read data from spreadsheets (`.xls`, `.xlsx`, `.ods`), you do not need to worry about field separators or number formatting (but you need extra packages such as `xlrd`, `openpyxl`, or `odfpy`).
@@ -219,6 +221,22 @@ You can conveniently combine multiple columns into one datetime object.
 ```{python}
 pd.read_excel("data/example-datetime.ods", parse_dates={"datetime": ["date", "time"]})
 ```
+
+#### Further formats
+
+There are many more formats that Pandas can read data from. Just type `pd.read_`
+and press tab to see the list of auto-completion options. A few notable ones:
+
+* All file-based read functions accept a remote URL as an option. We could have loaded the growth data with
+
+```{python}
+pd.read_csv(
+    "https://raw.githubusercontent.com/data-science-for-biotech/python-pandas-viz-ml/gh-pages/_episodes_rmd/data/yeast-growth.csv"
+)
+```
+
+* In the context of the web, `read_json` can be very handy
+* Tables are often stored in SQL databases, in that case `read_sql` is your friend
 
 ## Accessing data
 
@@ -390,6 +408,8 @@ growth[["od", "concentration"]].mean(axis=1)
 growth[["od", "concentration"]].std(axis=1)
 ```
 
+### Split-apply-combine
+
 Another powerful operation and a very common strategy for data transformation is
 [split, apply,
 combine](https://pandas.pydata.org/pandas-docs/stable/user_guide/groupby.html).
@@ -465,6 +485,6 @@ The process we have just seen is known as _extract_, _transform_, _load_ or simp
 
 ## Outlook
 
-* Tidy pandas data frames are excellent structures for visualizing data, either with the [built-in methods](https://pandas.pydata.org/docs/getting_started/intro_tutorials/04_plotting.html) or other packages as we will see in the [next episode](../02-data-visualization/index.html).
+* Tidy pandas data frames are excellent structures for visualizing data, either with the [built-in methods](https://pandas.pydata.org/docs/getting_started/intro_tutorials/04_plotting.html) or other packages. This will be part of the [next episode](../02-data-visualization/index.html).
 * The package [statsmodels](https://www.statsmodels.org/stable/index.html) can be used to fit statistical models to tidy data frames in a convenient fashion using `R`-style formulas.
 * Data frames due to their column names are more descriptive than pure numeric matrices (`numpy.ndarray`) which is handy in many tasks, for example, in machine learning as shown in the [last episode](../03-machine-learning/index.html).

@@ -96,6 +96,7 @@ exclude:
   - .vendor/
   - vendor/
   - .docker-vendor/
+  - geckodriver.log
 
 # Turn on built-in syntax highlighting.
 highlighter: rouge

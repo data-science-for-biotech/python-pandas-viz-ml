@@ -131,16 +131,16 @@ growth.sample(10)
 
 ~~~
     well  timepoint     od concentration_level  concentration
-49     a          8  0.028                 low           0.01
-315    a         46  0.208                 low           0.01
-91     a         14  0.037                 low           0.01
-161    a         24  0.061                 low           0.01
-423    d         61  0.196              medium           3.00
-317    c         46  0.153              medium           1.00
-426    g         61  0.032                high         300.00
-360    d         52  0.139              medium           3.00
-118    g         17  0.030                high         300.00
-242    e         35  0.046              medium          30.00
+332    d         48  0.120              medium           3.00
+263    e         38  0.046              medium          30.00
+139    g         20  0.032                high         300.00
+376    f         54  0.036                high         100.00
+415    c         60  0.231              medium           1.00
+424    e         61  0.063              medium          30.00
+392    a         57  0.234                 low           0.01
+142    c         21  0.049              medium           1.00
+312    e         45  0.051              medium          30.00
+12     f          2  0.015                high         100.00
 ~~~
 {: .output}
 
@@ -248,7 +248,7 @@ growth.describe(include="all")
        well   timepoint          od concentration_level  concentration
 count   455  455.000000  455.000000                 455     455.000000
 unique    7         NaN         NaN                   3            NaN
-top       c         NaN         NaN              medium            NaN
+top       a         NaN         NaN              medium            NaN
 freq     65         NaN         NaN                 195            NaN
 mean    NaN   33.000000    0.077193                 NaN      62.005714
 std     NaN   18.782314    0.068110                 NaN     102.928567

@@ -136,25 +136,25 @@ The `NaN` values displayed in the output are simply Pandas' concept of missing v
 > > ```{python}
 > > uk_data = pd.read_table("data/example-uk.txt")
 > > uk_data
-> > > > ```
+> > ```
 > >
 > > ```{python}
 > > uk_data = pd.read_table("data/example-uk.txt", sep=";")
 > > uk_data
-> > > > ```
+> > ```
 > >
 > > ```{python}
 > > uk_data.dtypes
-> > > > ```
+> > ```
 > >
 > > ```{python}
 > > uk_data = pd.read_table("data/example-uk.txt", sep=";", thousands=",")
 > > uk_data
-> > > > ```
+> > ```
 > >
 > > ```{python}
 > > uk_data.dtypes
-> > > > ```
+> > ```
 > >
 > {: .solution}
 >

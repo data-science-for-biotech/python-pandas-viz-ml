@@ -130,6 +130,8 @@ install-rmd-deps:
 
 ## * lesson-md        : convert Rmarkdown files to markdown
 lesson-md : $(RMD_DST)
+	zip data/requirements.zip requirements
+	zip data/data.zip _episodes_rmd/data
 
 $(RMD_DST): _episodes/%.md: _episodes_rmd/%.Rmd
 	@mkdir -p _episodes

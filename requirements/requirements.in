@@ -3,3 +3,8 @@ matplotlib
 odfpy
 openpyxl
 pandas
+seaborn
+scikit-bio
+scikit-learn
+scipy
+umap-learn

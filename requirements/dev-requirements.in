@@ -1,7 +1,8 @@
 -r requirements.txt
 
 altair-saver
-jedi <0.18
+ipywidgets
 jupyterlab
+jupyterlab_widgets
 jupytext
 selenium

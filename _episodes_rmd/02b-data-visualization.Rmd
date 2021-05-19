@@ -1,7 +1,7 @@
 ---
 title: "Visualize Your Data"
-teaching: 35
-exercises: 0
+teaching: 45
+exercises: 30
 questions:
   - "What tools exist to plot data in Python?"
   - "How do I make a basic plot?"
@@ -97,7 +97,7 @@ My opinion on native Pandas plotting:
   * [Vega](http://vega.github.io/vega) in turn is based on [D3.js](https://d3js.org/) thus it natively works in your browser and provides interactivity
   * Main authors Jake Vanderplas and Brian Granger are well known figures in the
     Python visualization space and as academics can be expected to keep maintaining the project
-    
+
 ## Grammar of Graphics
 
 The [grammar of graphics](https://www.springer.com/gp/book/9780387245447) was described by Leland Wilkinson. It was later [updated by Hadley Wickham](https://www.tandfonline.com/doi/abs/10.1198/jcgs.2009.07098) with ideas developed during the creation of his famous `R` plotting software `ggplot2`.

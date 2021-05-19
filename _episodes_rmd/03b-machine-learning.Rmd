@@ -3,7 +3,7 @@ title: "Machine Learning"
 teaching: 70
 exercises: 20
 questions:
-  - "What is this machine learning?"
+  - "What is machine learning?"
   - "What kind of tasks can I apply machine learning to?"
   - "How do I perform machine learning with scikit-learn?"
   - "How do I interpret my results?"
@@ -16,7 +16,7 @@ objectives:
 keypoints:
   - "Preparing data in the right format is often the hardest task."
   - "Machine learning provides methods for tasks such as dimensionality reduction, clustering, classification, and anomaly detection."
-  - "Having good visualizations is very important."
+  - "Having good visualizations is crucial for interpretation."
 ---
 
 ```{r, include = FALSE}

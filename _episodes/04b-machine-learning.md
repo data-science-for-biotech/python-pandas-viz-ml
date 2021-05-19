@@ -1,4 +1,5 @@
 ---
+layout: break
 title: "Machine Learning (continued)"
 teaching: 45
 exercises: 0

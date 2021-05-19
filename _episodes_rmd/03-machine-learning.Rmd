@@ -1,13 +1,22 @@
 ---
 title: "Machine Learning"
-teaching: 35
-exercises: 0
+teaching: 70
+exercises: 20
 questions:
-  - "What is this magic?"
+  - "What is this machine learning?"
+  - "What kind of tasks can I apply machine learning to?"
+  - "How do I perform machine learning with scikit-learn?"
+  - "How do I interpret my results?"
 objectives:
+  - "Get a rough overview on machine learning."
+  - "Clean up a real world data set."
   - "Get an introduction scikit-learn."
+  - "Apply dimensionality reduction, clustering, classification, and anomaly detection."
+  - "Visualize results in diverse ways."
 keypoints:
-  - "Classification."
+  - "Preparing data in the right format is often the hardest task."
+  - "Machine learning provides methods for tasks such as dimensionality reduction, clustering, classification, and anomaly detection."
+  - "Having good visualizations is very important."
 ---
 
 ```{r, include = FALSE}

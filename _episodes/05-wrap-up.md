@@ -8,11 +8,11 @@ break: 30
 
 Getting help:
 * [Stackoverflow](https://stackoverflow.com): dominant Q&A site for everything programming related (typically would end up here after a Google search)
-* [Biostarts](https://www.biostars.org): Q&A site for bioinformatics related questions
+* [Biostars](https://www.biostars.org): Q&A site for bioinformatics related questions
 * If you really get stuck, ask questions in the course's MS Team channel!
 
 Further course materials (in the same style of the course):
-* [Software carpentry](https://software-carpentry.org/lessons/): collection of official and community contributed course materials on learning programming languages (also R and Matlab) and related computational tools 
+* [Software carpentry](https://software-carpentry.org/lessons/): collection of official and community contributed course materials on learning programming languages (also R and Matlab) and related computational tools
 * [Data carpentry](https://datacarpentry.org/lessons/): huge collection of official and community contributed course materials on data science & engineering (also covering Biology a bit)
 
 Good coding practices and advise:
@@ -24,7 +24,7 @@ Python libraries relevant for biotech (not covered in the course):
 * [Biopython](https://biopython.org/): work with biological sequences
 * [Pydna](https://pydna.readthedocs.io/): molecular cloning, PCR simulation, primer design, ...
 * [scikit-image](https://scikit-image.org/): image processing and computer vision (counting colonies, cells, ...)
-* [auto-sklearn](https://automl.github.io/auto-sklearn/master/): auto-ML on of scikit-learn
+* [auto-sklearn](https://automl.github.io/auto-sklearn/master/): auto-ML of scikit-learn
 * [opentrons](https://docs.opentrons.com/v2/): program opentrons liquid handlers using Python
 * [cobrapy](https://opencobra.github.io/cobrapy/): work with metabolic models
 * [cameo](http://cameo.bio/): use metabolic models for cell factory design
